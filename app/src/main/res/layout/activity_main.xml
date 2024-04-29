@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/captureImageView"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toTopOf="@+id/removeFiltersBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/saveImageBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Salvar imagem"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/captureImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintWidth_percent="0.8"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/convertToGrayBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Tons de cinza"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/saveImageBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintWidth_percent="0.8"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/negativeFilterBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Filtro Negativo"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/convertToGrayBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintWidth_percent="0.8"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/sepiaFilterBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Filtro Sépia"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/negativeFilterBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintWidth_percent="0.8"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/edgeDetectionBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Detecção de Bordas"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/removeFiltersBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintWidth_percent="0.8"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/removeFiltersBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Limpar Filtros"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/sepiaFilterBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintWidth_percent="0.8"
+        android:layout_marginTop="8dp" />
+
+    <SeekBar
+        android:id="@+id/seekBarBrightness"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:max="200"
+        android:progress="100"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/edgeDetectionBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <SeekBar
+        android:id="@+id/seekBarContrast"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:max="200"
+        android:progress="100"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarBrightness"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/captureImgBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tirar foto"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
